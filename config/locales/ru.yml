@@ -1,0 +1,24 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+ru:
+  menu:
+    main: "Главная"
+    help: "Помощь"
+    base_knowledge: "База знаний"
+    search_text: "что я ищу"
+    search: "Поиск"
+    switch_procedure: "Перейти"
+    sign_in: "Войти"
+
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              blank: 'Вы не указали пароль'
+              confirmation: 'Пароли не совпадают'
+              too_short: 'Пароль слишком короткий'
+            email:
+              blank: 'Вы не указали email'

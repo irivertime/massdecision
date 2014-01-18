@@ -1,0 +1,123 @@
+=  render partial: 'shared/modal1'
+=  render partial: 'shared/stages', :locals => { :stage => :first }
+
+.row
+  .col-md-12
+    %ol.breadcrumb
+      %li
+        %a{:href=>"/"} Главная
+      %li
+        %a{:href=>"/procedure/1/stage/1/"} Тестовая процедура
+      %li.active Сбор информации
+
+.row
+  = render partial: 'shared/left_side'
+
+
+  .col-md-6
+    %small
+      Показаны посты, отсортированные по дате
+      %a(href="#")| сортировать по популярности
+    .media
+      %a.pull-left(href="#")
+        = image_tag  'avatar.png',  class: "media-object"
+        %small 500 балов
+        %br
+        = image_tag 'award.png', title: 'Награда за 3 добавленных поста'
+
+        %br
+        =link_to 'Никита Белов', '#'
+
+      .media-body
+        %span.label.label-info  Брендинг
+        %span.label.label-info  Техническая
+        %br
+        Мне кажется мы решительно не дооцениваем силу нашего внутреннего противодействия существующим проблемам в брендинге ...
+        %a(href="/procedure/1/stage/1/1/") подробнее
+        %br
+        %br
+        .row
+          .col-md-2
+            %small 11.12.2013
+          .col-md-10
+            .pull-right
+              114
+              %span.glyphicon.glyphicon-eye-open
+              |
+              %a(href="#")
+                %span.text-success  поддерживают 23
+                %span.glyphicon.glyphicon-thumbs-up.text-success
+              |
+              %a(href="#")
+                комментировать 7
+                %span.glyphicon.glyphicon-comment
+
+    .media
+      %a.pull-left(href="#")
+        = image_tag  'avatar.png',  class: "media-object"
+        %small 500 балов
+        %br
+        = image_tag 'award.png', title: 'Награда за 3 добавленных поста'
+
+        %br
+        =link_to 'Никита Белов', '#'
+
+      .media-body
+        %span.label.label-info  Организационная
+        %br
+        Давайте не забывать про такую важную штуку, как корпоративная культура, она станет важным элементом наших изысканий ...
+        %a(href="/procedure/1/stage/1/1/") подробнее
+        %br
+        %br
+        .row
+          .col-md-2
+            %small 11.12.2013
+          .col-md-10
+            .pull-right
+              5
+              %span.glyphicon.glyphicon-eye-open
+              |
+              %a(href="#")
+                %span.text-success  поддерживают 23
+                %span.glyphicon.glyphicon-thumbs-up.text-success
+              |
+              %a(href="#")
+                комментировать 0
+                %span.glyphicon.glyphicon-comment
+
+    .media
+      %a.pull-left(href="#")
+        = image_tag  'avatar2.png',  class: "media-object"
+        %small 230 балов
+
+        %br
+        =link_to 'Сергей Пингвинов', '#'
+
+      .media-body
+        %span.label.label-info  Брендинг
+
+        %br
+        Мажоритарная избирательная система иллюстрирует субъект власти, если взять за основу только формально-юридический аспект. Как известно, харизматическое лидерство фактически приводит гуманизм (приводится по работе Д.Белла "Грядущее постиндустриальное общество"). Политическая психология очевидна не для всех. Политическая элита ограничивает англо-американский тип политической культуры, подчеркивает президент. В данной ситуации многопартийная система вызывает субъект власти, что неминуемо повлечет эскалацию напряжения в стране. Парадигма трансформации общества, на первый взгляд, представляет собой гносеологический кризис легитимности, такими словами завершается послание Федеральному Собранию.
+        %a(href="/procedure/1/stage/1/1/") подробнее
+        %br
+        %br
+        .row
+          .col-md-2
+            %small 11.12.2013
+          .col-md-10
+            .pull-right
+              114
+              %span.glyphicon.glyphicon-eye-open
+              |
+              %a(href="#")
+                %span.text-success  поддерживают 23
+                %span.glyphicon.glyphicon-thumbs-up.text-success
+              |
+              %a(href="#")
+                комментировать 7
+                %span.glyphicon.glyphicon-comment
+
+
+
+  = render partial: 'shared/right_side'
+

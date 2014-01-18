@@ -1,0 +1,100 @@
+-#=  render partial: 'shared/modal1'
+=  render partial: 'shared/stages', :locals => { :stage => :second }
+
+.row
+  .col-md-12
+    %ol.breadcrumb
+      %li
+        %a{:href=>"/"} Главная
+      %li
+        %a{:href=>"/procedure/1/stage/1/"} Тестовая процедура
+      %li
+        %a{:href=>"/procedure/1/stage/2/"} Сбор несовершенств
+      %li.active Несовершенство Михайло Собакевича
+
+.row
+  = render partial: 'shared/left_side'
+
+
+  .col-md-6
+
+    .media
+      %a.pull-left(href="#")
+        = image_tag  'avatar3.png',  class: "media-object"
+        %small 40 балов
+        %br
+        =link_to 'Михайло Собакевич', '#'
+
+      .media-body
+        %span.label.label-info  Брендинг
+        %br
+        %span.label.label-default что
+        Нестабильный спрос на мертвые души
+        %br
+        %span.label.label-default где
+        в губернском городе N
+        %br
+        %span.label.label-default когда
+        все время
+
+        %br
+        %br
+        .pull-right
+          %button(type="button" class="btn btn-danger btn-xs") Пожаловаться на это несовершенство
+        %br
+        %br
+        .row
+          .col-md-2
+            %small 11.12.2013
+          .col-md-10
+            .pull-right
+              5
+              %span.glyphicon.glyphicon-eye-open
+              |
+              %span.text-success за 4
+              %span.glyphicon.glyphicon-thumbs-up.text-success
+              |
+              %span.text-danger против 32
+              %span.glyphicon.glyphicon-thumbs-down.text-danger
+              |
+              комментировать 2
+              %span.glyphicon.glyphicon-comment
+
+    %br
+    %br
+    %br
+    %ul.media-list
+      %li.media
+        %a.pull-left(href="#")
+          = image_tag  'avatar2.png',  class: "media-object"
+          %small 340 балов
+          %br
+          =link_to 'Андрей Папанин', '#'
+        .media-body
+          Согласен с автором и поддерживаю его на 100%!
+          .row
+            .col-md-12
+              .pull-right
+                %a(href="#")
+                  поддерживают 5
+                  %span.glyphicon.glyphicon-thumbs-up
+          .media
+            %a.pull-left(href="#")
+              = image_tag  'avatar.png',  class: "media-object"
+              %small 500 балов
+              %br
+              =link_to 'Никита Белов', '#'
+            .media-body
+              А вы не думаете что проблема надуманная?
+              .row
+                .col-md-12
+                  .pull-right
+                    %a(href="#")
+                      поддерживают 1
+                      %span.glyphicon.glyphicon-thumbs-up
+
+
+
+
+  = render partial: 'shared/right_side'
+

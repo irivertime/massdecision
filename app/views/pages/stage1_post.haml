@@ -1,0 +1,103 @@
+-#=  render partial: 'shared/modal1'
+=  render partial: 'shared/stages', :locals => { :stage => :first }
+
+.row
+  .col-md-12
+    %ol.breadcrumb
+      %li
+        %a{:href=>"/"} Главная
+      %li
+        %a{:href=>"/procedure/1/stage/1/"} Тестовая процедура
+      %li
+        %a{:href=>"/procedure/1/stage/1/"} Сбор информации
+      %li.active Пост Никиты Белова
+
+.row
+  = render partial: 'shared/left_side'
+
+
+  .col-md-6
+
+    .media
+      %a.pull-left(href="#")
+        = image_tag  'avatar.png',  class: "media-object"
+        %small 500 балов
+
+        %br
+        =link_to 'Никита Белов', '#'
+
+      .media-body
+        %span.label.label-info  Брендинг
+        %span.label.label-info  Техническая
+        %br
+        Как уже отмечалось, политическое учение Платона доказывает теоретический коллапс Советского Союза, отмечает автор, цитируя К.Маркса и Ф.Энгельса. В постмодернистской перспективе понятие политического участия представляет собой социализм, что может привести к военно-политической и идеологической конфронтации с Японией. Безусловно, доиндустриальный тип политической культуры важно верифицирует системный континентально-европейский тип политической культуры, что может привести к военно-политической и идеологической конфронтации с Японией. Однако идеология вероятна. Как уже подчеркивалось, политическое учение Августина неоднозначно
+        %a.thumbnail(href="#" style="width:300px;")
+          =image_tag '1_small.jpg'
+        .row
+          .col-md-2
+            %small 11.12.2013
+          .col-md-10
+            .pull-right
+              114
+              %span.glyphicon.glyphicon-eye-open
+              |
+              %a(href="#")
+                %span.text-success  поддерживают 23
+                %span.glyphicon.glyphicon-thumbs-up.text-success
+              |
+              комментировать 3
+              %span.glyphicon.glyphicon-comment
+    %br
+    %br
+    %br
+    %ul.media-list
+      %li.media
+        %a.pull-left(href="#")
+          = image_tag  'avatar2.png',  class: "media-object"
+          %small 340 балов
+          %br
+          =link_to 'Андрей Папанин', '#'
+        .media-body
+          Автор упускает несколько спорных моментов
+          .row
+            .col-md-12
+              .pull-right
+                %a(href="#")
+                  поддерживают 5
+                  %span.glyphicon.glyphicon-thumbs-up
+          .media
+            %a.pull-left(href="#")
+              = image_tag  'avatar.png',  class: "media-object"
+              %small 500 балов
+              %br
+              =link_to 'Никита Белов', '#'
+            .media-body
+              Ну так укажите мне на них!
+              .row
+                .col-md-12
+                  .pull-right
+                    %a(href="#")
+                      поддерживают 1
+                      %span.glyphicon.glyphicon-thumbs-up
+
+      %li.media
+        %a.pull-left(href="#")
+          = image_tag  'avatar2.png',  class: "media-object"
+          %small 340 балов
+
+          %br
+          =link_to 'Андрей Папанин', '#'
+
+        .media-body
+          Автор не указал возможного практического применения
+          .row
+            .col-md-12
+              .pull-right
+                %a(href="#")
+                  поддерживают 10
+                  %span.glyphicon.glyphicon-thumbs-up
+
+
+
+  = render partial: 'shared/right_side'
+

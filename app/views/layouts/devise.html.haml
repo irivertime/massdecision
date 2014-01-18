@@ -1,0 +1,83 @@
+!!! 5
+%html(lang="en")
+  %head
+    %meta(charset="utf-8")
+    %meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    %meta(http-equiv="X-UA-Compatible" content="IE=8")
+    %title
+      = content_for?(:title) ? yield(:title) : 'Massdecision'
+    = csrf_meta_tags
+
+    = stylesheet_link_tag 'application', media: 'all'
+    %link(href="/assets/favicon.ico" rel="shortcut icon")
+
+
+  %body
+    .row
+      .col-md-10.col-md-offset-1
+        %nav.navbar.navbar-default{:role => "navigation"}
+          .navbar-header
+            %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+              %span.sr-only Toggle navigation
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            =image_tag 'logo.png'
+            &nbsp;
+            -#%a.navbar-brand{:href => "#"} Brand
+          / Collect the nav links, forms, and other content for toggling
+          #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            %ul.nav.navbar-nav
+              %li
+                %a{:href => "#"}=t('menu.main')
+              %li
+                %a{:href => "#"}=t('menu.help')
+              %li
+                %a{:href => "#"}=t('menu.base_knowledge')
+              %li.dropdown
+                %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                  =t('menu.switch_procedure')
+                  %b.caret
+                %ul.dropdown-menu
+                  %li
+                    %a{:href => "#"} процедура в Ирбис
+                  %li
+                    %a{:href => "#"} процедура в СГУ
+                  %li.divider
+                  %li
+                    %a{:href => "#"} Начать новую
+
+
+            %ul.nav.navbar-nav.navbar-right
+              %li
+                =link_to  t('menu.sign_in'), '/'
+              -#%li.dropdown
+              -#  %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              -#    Dropdown
+              -#    %b.caret
+              -#  %ul.dropdown-menu
+              -#    %li
+              -#      %a{:href => "#"} Action
+              -#    %li
+              -#      %a{:href => "#"} Another action
+              -#    %li
+              -#      %a{:href => "#"} Something else here
+              -#    %li.divider
+              -#    %li
+              -#      %a{:href => "#"} Separated link
+            %form.navbar-form.navbar-right{:role => "search"}
+              .form-group
+                %input.form-control{:placeholder => t('menu.search_text'), :type => "text"}/
+              %button.btn.btn-default{:type => "submit"}=t('menu.search')
+    .row
+      .col-md-4.col-md-offset-4
+        = yield
+
+    /
+      Javascripts
+      \==================================================
+    / Placed at the end of the document so the pages load faster
+    = javascript_include_tag 'application'
+    = javascript_include_tag 'bootstrap'
+

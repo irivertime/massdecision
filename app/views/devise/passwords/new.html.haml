@@ -1,0 +1,7 @@
+
+= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { class: 'form-devise', :method => :post }) do |f|
+  = devise_error_messages!
+  .input-group
+    = f.email_field :email, :autofocus => true , class: 'form-control input', placeholder: t('devise.placeholders.email'), size: '16',type: 'text'
+  %div= f.submit "Восстановить пароль", class: 'btn btn-danger'
+= render "devise/shared/links"

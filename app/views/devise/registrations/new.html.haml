@@ -1,0 +1,15 @@
+= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: {class: 'form-devise', id: 'ender'}) do |f|
+
+  = devise_error_messages!
+
+  .input-group
+    = f.text_field :name, :autofocus => true, class: 'form-control input', placeholder: t('devise.placeholders.name'), size: '16',type: 'text'
+  .input-group
+    = f.email_field :email, :autofocus => true, class: 'form-control input', placeholder: t('devise.placeholders.email'), size: '16',type: 'text'
+  .input-group
+    = f.password_field :password, class: 'form-control input', placeholder: t('devise.placeholders.password_current'), size: '16'
+  .input-group
+    = f.password_field :password_confirmation, class: 'form-control input', placeholder: t('devise.placeholders.password_repeat'), size: '16'
+  %div= f.submit t('devise.sign_up'), class: 'btn btn-danger'
+%br
+= render "devise/shared/links"

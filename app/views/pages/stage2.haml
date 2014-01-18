@@ -1,0 +1,286 @@
+=  render partial: 'shared/modal2'
+=  render partial: 'shared/stages', :locals => { :stage => :second }
+
+.row
+  .col-md-12
+    %ol.breadcrumb
+      %li
+        %a{:href=>"/"} Главная
+      %li
+        %a{:href=>"/procedure/1/stage/1/"} Тестовая процедура
+      %li.active Сбор несовершенств - 1 стадия
+
+.row
+  = render partial: 'shared/left_side'
+
+
+  .col-md-6
+    .alert.alert-success
+      = link_to 'посмотреть на 2 стадию сбора несовершенств', '/procedure/1/stage/2_1'
+    %small
+      Показаны несовершенства, отсортированные по дате
+      %a(href="#")| сортировать по популярности
+    %br
+    %br
+    %a(href="/procedure/1/stage/2/add")
+      %button(type="button" class="btn btn-primary") Добавить свое несовершенство
+    .media
+      %a.pull-left(href="#")
+        = image_tag  'avatar2.png',  class: "media-object"
+        %small 40 балов
+        %br
+        =link_to 'Cергей Ястржемский', '#'
+
+      .media-body
+        %span.label.label-info  Организационная
+        %span.label.label-danger  Имеющиеся недостатки
+        %br
+        %span.label.label-default что
+        Нереруглярно ездят коллежские ассесоры
+        %br
+        %span.label.label-default где
+        Во Владимирской губернии
+        %br
+        %span.label.label-default когда
+        Во время сбора подати
+
+
+        %a(href="/procedure/1/stage/2/1/") подробнее
+        %br
+        %br
+        .row
+          .col-md-2
+            %small 11.12.2013
+          .col-md-10
+            .pull-right
+              5
+              %span.glyphicon.glyphicon-eye-open
+              |
+              %span.text-success за 30
+              %span.glyphicon.glyphicon-thumbs-up.text-success
+              |
+              %span.text-danger против 5
+              %span.glyphicon.glyphicon-thumbs-down.text-danger
+              |
+              комментировать 1
+              %span.glyphicon.glyphicon-comment
+
+
+
+    .media
+      %a.pull-left(href="#")
+        = image_tag  'avatar3.png',  class: "media-object"
+        %small 40 балов
+        %br
+        =link_to 'Михайло Собакевич', '#'
+
+      .media-body
+        %span.label.label-info  Брендинг
+        %span.label.label-success  Отсутствующие достоинства
+
+        %br
+        %span.label.label-default что
+        Нестабильный спрос на мертвые души
+        %br
+        %span.label.label-default где
+        в губернском городе N
+        %br
+        %span.label.label-default когда
+        все время
+
+
+        %a(href="/procedure/1/stage/2/1/") подробнее
+        %br
+        %br
+        .row
+          .col-md-2
+            %small 11.12.2013
+          .col-md-10
+            .pull-right
+              5
+              %span.glyphicon.glyphicon-eye-open
+              |
+              %span.text-success за 4
+              %span.glyphicon.glyphicon-thumbs-up.text-success
+              |
+              %span.text-danger против 32
+              %span.glyphicon.glyphicon-thumbs-down.text-danger
+              |
+              комментировать 1
+              %span.glyphicon.glyphicon-comment
+
+    .media
+      %a.pull-left(href="#")
+        = image_tag  'avatar2.png',  class: "media-object"
+        %small 40 балов
+        %br
+        =link_to 'Cергей Ястржемский', '#'
+
+      .media-body
+        %span.label.label-info  Организационная
+        %span.label.label-danger  Имеющиеся недостатки
+        %br
+        %span.label.label-default что
+        Нереруглярно ездят коллежские ассесоры
+        %br
+        %span.label.label-default где
+        Во Владимирской губернии
+        %br
+        %span.label.label-default когда
+        Во время сбора подати
+
+
+        %a(href="/procedure/1/stage/2/1/") подробнее
+        %br
+        %br
+        .row
+          .col-md-2
+            %small 11.12.2013
+          .col-md-10
+            .pull-right
+              5
+              %span.glyphicon.glyphicon-eye-open
+              |
+              %span.text-success за 30
+              %span.glyphicon.glyphicon-thumbs-up.text-success
+              |
+              %span.text-danger против 5
+              %span.glyphicon.glyphicon-thumbs-down.text-danger
+              |
+              комментировать 1
+              %span.glyphicon.glyphicon-comment
+
+
+
+    .media
+      %a.pull-left(href="#")
+        = image_tag  'avatar3.png',  class: "media-object"
+        %small 40 балов
+        %br
+        =link_to 'Михайло Собакевич', '#'
+
+      .media-body
+        %span.label.label-info  Брендинг
+        %span.label.label-success  Отсутствующие достоинства
+
+        %br
+        %span.label.label-default что
+        Нестабильный спрос на мертвые души
+        %br
+        %span.label.label-default где
+        в губернском городе N
+        %br
+        %span.label.label-default когда
+        все время
+
+
+        %a(href="/procedure/1/stage/2/1/") подробнее
+        %br
+        %br
+        .row
+          .col-md-2
+            %small 11.12.2013
+          .col-md-10
+            .pull-right
+              5
+              %span.glyphicon.glyphicon-eye-open
+              |
+              %span.text-success за 4
+              %span.glyphicon.glyphicon-thumbs-up.text-success
+              |
+              %span.text-danger против 32
+              %span.glyphicon.glyphicon-thumbs-down.text-danger
+              |
+              комментировать 1
+              %span.glyphicon.glyphicon-comment
+
+    .media
+      %a.pull-left(href="#")
+        = image_tag  'avatar2.png',  class: "media-object"
+        %small 40 балов
+        %br
+        =link_to 'Cергей Ястржемский', '#'
+
+      .media-body
+        %span.label.label-info  Организационная
+        %span.label.label-danger  Имеющиеся недостатки
+        %br
+        %span.label.label-default что
+        Нереруглярно ездят коллежские ассесоры
+        %br
+        %span.label.label-default где
+        Во Владимирской губернии
+        %br
+        %span.label.label-default когда
+        Во время сбора подати
+
+
+        %a(href="/procedure/1/stage/2/1/") подробнее
+        %br
+        %br
+        .row
+          .col-md-2
+            %small 11.12.2013
+          .col-md-10
+            .pull-right
+              5
+              %span.glyphicon.glyphicon-eye-open
+              |
+              %span.text-success за 30
+              %span.glyphicon.glyphicon-thumbs-up.text-success
+              |
+              %span.text-danger против 5
+              %span.glyphicon.glyphicon-thumbs-down.text-danger
+              |
+              комментировать 1
+              %span.glyphicon.glyphicon-comment
+
+
+
+    .media
+      %a.pull-left(href="#")
+        = image_tag  'avatar3.png',  class: "media-object"
+        %small 40 балов
+        %br
+        =link_to 'Михайло Собакевич', '#'
+
+      .media-body
+        %span.label.label-info  Брендинг
+        %span.label.label-success  Отсутствующие достоинства
+
+        %br
+        %span.label.label-default что
+        Нестабильный спрос на мертвые души
+        %br
+        %span.label.label-default где
+        в губернском городе N
+        %br
+        %span.label.label-default когда
+        все время
+
+
+        %a(href="/procedure/1/stage/2/1/") подробнее
+        %br
+        %br
+        .row
+          .col-md-2
+            %small 11.12.2013
+          .col-md-10
+            .pull-right
+              5
+              %span.glyphicon.glyphicon-eye-open
+              |
+              %span.text-success за 4
+              %span.glyphicon.glyphicon-thumbs-up.text-success
+              |
+              %span.text-danger против 32
+              %span.glyphicon.glyphicon-thumbs-down.text-danger
+              |
+              комментировать 1
+              %span.glyphicon.glyphicon-comment
+
+
+
+
+  = render partial: 'shared/right_side'
+

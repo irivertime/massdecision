@@ -1,0 +1,78 @@
+=  render partial: 'shared/modal_add'
+=  render partial: 'shared/stages', :locals => { :stage => :second }
+
+.row
+  .col-md-12
+    %ol.breadcrumb
+      %li
+        %a{:href=>"/"} Главная
+      %li
+        %a{:href=>"/procedure/1/stage/1/"} Тестовая процедура
+      %li
+        %a{:href=>"/procedure/1/stage/2/"} Сбор несовершенств
+      %li.active Добавление своего несовершенства
+
+.row
+  = render partial: 'shared/left_side'
+
+
+  .col-md-6
+    %button.btn.btn-info(data-toggle="modal" data-target="#modalStage2")
+      Показать пример
+    %br
+    %br
+    .form-group.has-success
+      %label.control-label(for="exampleInputEmail1") Что вас не устраивает
+      %textarea.form-control(rows="3" placeholder="событие")
+    .form-group.has-success
+      %label.control-label(for="exampleInputEmail1") Когда это происходит?
+      %textarea.form-control(rows="3"placeholder="время")
+    .form-group.has-success
+      %label.control-label(for="exampleInputEmail1") Где это происходит?
+      %textarea.form-control(rows="3"placeholder="место")
+    .form-group
+      %select
+        %option> брендинг
+        %option> организационный
+        %option> технический
+      %label.radio-inline
+        %input(type="radio" name="optionsRadios" id="optionsRadios1" value="option1")
+          %span.text-danger Имеющийся негатив
+      %label.radio-inline
+        %input(type="radio" name="optionsRadios2" id="optionsRadios1" value="option2")
+          %span.text-success Отсутствующий позитив
+
+    %button.btn.btn-primary(type="button" data-loading-text="Loading...") Сохранить
+    %hr
+    %h4 Похожие  несовершенства
+    %p.text-primary  Проверьте не добавлено ли ваше несовершенство другими участниками?
+
+    %p.text-danger Очень похоже на ваше несовершенство !
+    .media
+      %a.pull-left(href="#")
+        = image_tag  'avatar2.png',  class: "media-object"
+        %small 40 балов
+        %br
+        =link_to 'Cергей Ястржемский', '#'
+
+      .media-body
+        %span.label.label-info  Организационная
+        %span.label.label-danger  Имеющиеся недостатки
+        %br
+
+        %br
+        %span.label.label-default что
+        Нереруглярно ездят коллежские ассесоры
+        %br
+        %span.label.label-default где
+        Во Владимирской губернии
+        %br
+        %span.label.label-default когда
+        Во время сбора подати
+
+
+
+
+
+  = render partial: 'shared/right_side'
+

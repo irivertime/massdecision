@@ -1,0 +1,14 @@
+%br
+= form_for(resource, :as => resource_name, :url => session_path(resource_name), html: {class: 'form-devise', id: 'enter'}) do |f|
+  .input-group
+    = f.email_field :email, :autofocus => true, class: 'form-control input', placeholder: t('devise.placeholders.email'), size: '16',type: 'text'
+  .input-group
+    = f.password_field :password, autofocus: true, class: 'form-control', placeholder: t('devise.placeholders.password'), size: '16',type: 'password'
+  - if devise_mapping.rememberable?
+    %div
+      = f.check_box :remember_me
+      =t('devise.remember_me')
+  %br
+  %div= f.submit t('devise.sign_in'), class: 'btn btn-danger'
+%br
+= render "devise/shared/links"

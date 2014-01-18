@@ -1,0 +1,47 @@
+.row
+  .col-md-12
+    %nav.navbar.navbar-default.navbar-inverse{:role => "navigation"}
+      .navbar-header
+        %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        &nbsp;
+        -#%a.navbar-brand{:href => "#"} Brand
+      / Collect the nav links, forms, and other content for toggling
+      #bs-example-navbar-collapse-1.collapse.navbar-collapse
+        %ul.nav.navbar-nav
+          %li{class: ('active' if stage == :first) }
+            %a{:href => "/procedure/1/stage/1?help1"}
+              Сбор информации
+              %br
+              %small.text-center 35 записей
+          %li.divider_vertical
+
+          %li{class: ('active' if stage == :second) }
+            %a{:href => "/procedure/1/stage/2?help1"}
+              Анализ ситуации
+              %br
+              %small.text-center 14 записей
+          %li.divider_vertical
+
+          %li.disabled
+            %a{:href => "#"}
+              Формулирование проблемы
+              %br
+              %small.text-center Начнется через 7 дней
+          %li.divider_vertical
+
+          %li.disabled
+            %a{:href => "#"}
+              Проекты
+              %br
+              %small.text-center Начнется через 10 дней
+          %li.divider_vertical
+
+          %li.disabled
+            %a{:href => "#"}
+              Оценивание и выбор
+              %br
+              %small.text-center Начнется через 20 дней

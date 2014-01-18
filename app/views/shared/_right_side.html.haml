@@ -1,0 +1,49 @@
+.col-md-3
+  .panel.panel-default
+    .panel-heading Инструменты администратора
+    .panel-body
+      =link_to 'Добавить тему', '#'
+      %br
+      =link_to 'Перейти к следующему этапу', '#'
+
+  .panel.panel-default
+    .panel-heading Темы процедуры
+    .panel-body
+      .input-group
+        %span.input-group-addon
+          %input{type:"radio"}
+        %input.form-control(id="disabledInput" type="text" placeholder="Техническая (23)" disabled)
+
+      .input-group
+        %span.input-group-addon
+          %input{type:"radio"}
+        %input.form-control(id="disabledInput" type="text" placeholder="Организационная (74)" disabled)
+
+      .input-group
+        %span.input-group-addon
+          %input{type:"radio"}
+        %input.form-control(id="disabledInput" type="text" placeholder="Брендинг (11 + 1)" disabled)
+
+  %ul.nav.nav-tabs
+    %li.active
+      =link_to 'Избранные', '#'
+    %li
+      =link_to 'Обсуждаемые', '#'
+
+  .imperfection_journal
+    Здравствуйте, я хочу обратить ваше внимание, что мы обсуждаем проблему ...
+    %br
+    =link_to 'Иван Орлов', '#'
+    %small 12.13.2014
+  .imperfection_journal
+    Спасибо всем за помощь  ...
+    %br
+    =link_to 'Сергей Телятников', '#'
+    %small 12.13.2014
+  .imperfection_journal
+    А какие будут призы? реально деньги? ...
+    %br
+    =link_to 'Степан Плюшкин', '#'
+    %small 12.13.2014
+
+
