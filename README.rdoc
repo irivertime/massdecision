@@ -1,3 +1,3 @@
 == Здесь мы тестируем новые интерфейсы для massdecision
 
-http://massdecision2.herokuapp.com/
+http://aqueous-tor-3318.herokuapp.com/
